@@ -165,7 +165,6 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     var phonePattern = /^[0-9]{10}$/;
 
     if (name.trim() == '') {
-        //alert('Please enter a name.');
         var nameError = document.getElementById('nameError');
         nameError.textContent = 'Please enter a name.'; // Show error message
         var error = 1;
@@ -177,7 +176,6 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     }
 
     if (email.trim() == '') {
-        //alert('Please enter a name.');
         var emailError = document.getElementById('emailError');
         emailError.textContent = 'Please enter an email.'; // Show error message
         var error = 1;
@@ -190,7 +188,6 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     }
 
     if (!isValidEmail(email)) {
-        //alert('Please enter a name.');
         var emailError = document.getElementById('emailError');
         emailError.textContent = 'Please enter valid email.'; // Show error message
         var error = 1;
@@ -203,7 +200,6 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     }
 
     if (phone.trim() == '') {
-        //alert('Please enter a name.');
         var phoneError = document.getElementById('phoneError');
         phoneError.textContent = 'Please enter phone.'; // Show error message
         var error = 1;
@@ -216,8 +212,6 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
 
     // Check if phone number is valid
     if (!phonePattern.test(phone)) {
-        //alert('Please enter a valid 10-digit phone number.');
-        //$('#phone-error').text('Please enter a valid 10-digit phone number.'); // Show error message
         var phoneError = document.getElementById('phoneError');
         phoneError.textContent = 'Please enter valid 10 digit phone.'; // Show error message
         var error = 1;
@@ -239,7 +233,6 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     
 
     if (role_id.trim() == '') {
-        //alert('Please enter a name.');
         var role_idError = document.getElementById('role_idError');
         role_idError.textContent = 'Please select role id.'; // Show error message
         var error = 1;
@@ -251,7 +244,6 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     }
 
     if (profileImage. trim() == '') {
-        //alert('Please enter a name.');
         var profile_imageError = document.getElementById('profile_imageError');
         profile_imageError.textContent = 'Please select image.'; // Show error message
         var error = 1;
@@ -266,11 +258,6 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
         return false;
     }
 
-    // if (profileImage.trim() == '') {
-    //     //alert('Please select a profile image.');
-    //     $('#profile_image-error').text('Please select a profile image.'); // Show error message
-    //     event.preventDefault();
-    // }
     
 
     var formData = new FormData(this); // Create FormData object to send form data
